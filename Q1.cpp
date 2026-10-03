@@ -1,9 +1,9 @@
 #include <iostream>
 using namespace std;
 
-int countDigits(int n) {
+bool countDigits(int n) {
     if (n == 0)
-        return 1;
+        return 0;
 
     n = abs(n);
     int count = 0;
@@ -13,7 +13,7 @@ int countDigits(int n) {
         count++;
     }
 
-    return count;
+    return count%2 == 0;
 }
 
 int main() {
